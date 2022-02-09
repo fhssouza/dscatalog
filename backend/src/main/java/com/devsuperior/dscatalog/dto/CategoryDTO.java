@@ -8,20 +8,20 @@ public class CategoryDTO implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
 	private Long id;
-	private String nome;
+	private String name;
 	
 	public CategoryDTO() {
 		
 	}
 
-	public CategoryDTO(Long id, String nome) {
+	public CategoryDTO(Long id, String name) {
 		this.id = id;
-		this.nome = nome;
+		this.name = name;
 	}
 	
 	public CategoryDTO(Category entity) {
 		this.id = entity.getId();
-		this.nome = entity.getName();
+		this.name = entity.getName();
 	}
 	
 	public Long getId() {
@@ -32,12 +32,12 @@ public class CategoryDTO implements Serializable {
 		this.id = id;
 	}
 
-	public String getNome() {
-		return nome;
+	public String getname() {
+		return name;
 	}
 
-	public void setNome(String nome) {
-		this.nome = nome;
+	public void setname(String name) {
+		this.name = name;
 	}
 	
 	
