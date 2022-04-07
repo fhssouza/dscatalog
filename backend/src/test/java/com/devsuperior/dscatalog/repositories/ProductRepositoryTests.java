@@ -41,6 +41,20 @@ public class ProductRepositoryTests {
 		Assertions.assertEquals(countTotalProducts + 1, product.getId());
 
 	}
+	
+	@Test
+	public void findByIdShouldReturnNomEmptyOptionalWhenIdExists() {
+		
+		Optional<Product> result = repository.findById(exintinId);
+		Assertions.assertTrue(result.isPresent());
+	}
+
+	@Test
+	public void findByIdShouldReturnEmptyOptionalWhenIdDoesNotExist() {
+		
+		Optional<Product> result = repository.findById(nonExistingId);
+		Assertions.assertTrue(result.isEmpty());
+	}
 
 	@Test
 	public void deleteShouldDeleteObjctWhenIdExists() {
